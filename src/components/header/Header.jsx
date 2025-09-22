@@ -43,6 +43,13 @@ function Header() {
           </span>
         </div>
 
+        <div className="headerHover flex-col items-start justify-center ">
+          <p className="text-xs text-lightText font-light">Hello, Sign in </p>
+          <p className="text-xs font-semibold -mt-1 text-whiteText">Accounts & Lists 
+            <span><ArrowDropDownOutlined/></span>
+          </p>
+        </div>
+
       </div>
     </div>
   )
