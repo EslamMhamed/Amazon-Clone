@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       maxWidth: {
-        Container : "1440px"
+        container : "1440px"
       },
       screens: {
         xs:"320px",

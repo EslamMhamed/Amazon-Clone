@@ -6,14 +6,15 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from "react";
 import { allItems } from "../../constants";
+import HeaderBottom from "./HeaderBottom";
 
 
 function Header() {
   const [showAll, setShowAll] = useState(false)
 
   return (
-   <div>
-     <div className='w-full bg-amazon_blue px-4 py-3 text-white flex items-center gap-4'>
+   <div className="w-full">
+     <div className='bg-amazon_blue py-3 px-4  text-white flex items-center gap-4'>
         <div className="headerHover ">
          <img src={logo} alt="logo" className="w-24 mt-2" />
         </div>
@@ -62,6 +63,8 @@ function Header() {
         </div>
 
       </div>
+
+      <HeaderBottom />
     </div>
   )
 }
