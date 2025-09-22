@@ -24,7 +24,19 @@ export default {
       fontFamily:{
         titleFont: "Roboto",
         bodyFont: "Poppins",
-
+      },
+      colors:{
+        amazon_blue: "#131921",
+        amazon_light: "#232f3e",
+        amazon_yellow: "#febd69",
+        whiteText: "#ffffff",
+        lightText: "#ccc",
+        quantity_box: "#f0f2f2",
+        footerBottom: "#131A22",
+      },
+      boxShadow:{
+        textShadow: "0px 0px 32px 1px rgba(199,199,199,1)",
+        amazonInput: "0 0 3px 2px rgb(228 121 17 / 50%)"
       }
     },
   },
