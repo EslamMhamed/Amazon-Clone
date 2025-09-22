@@ -50,6 +50,11 @@ function Header() {
           </p>
         </div>
 
+        <div className="headerHover flex-col items-start justify-center text-xs ">
+          <p className=" text-lightText font-light">Returns</p>
+          <p className=" font-semibold -mt-1 text-whiteText">& Orders</p>
+        </div>
+
       </div>
     </div>
   )
