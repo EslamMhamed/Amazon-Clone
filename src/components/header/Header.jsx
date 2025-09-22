@@ -1,6 +1,6 @@
 import {logo} from "../../assets/index"
 
-import { ArrowDropDownOutlined, LocationOnOutlined } from "@mui/icons-material";
+import { ArrowDropDownOutlined, LocationOnOutlined, ShoppingCart } from "@mui/icons-material";
 import AddLocationIcon from '@mui/icons-material/AddLocation';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import SearchIcon from '@mui/icons-material/Search';
@@ -50,9 +50,15 @@ function Header() {
           </p>
         </div>
 
-        <div className="headerHover flex-col items-start justify-center text-xs ">
+        <div className="headerHover flex-col items-start  text-xs ">
           <p className=" text-lightText font-light">Returns</p>
           <p className=" font-semibold -mt-1 text-whiteText">& Orders</p>
+        </div>
+
+        <div className="headerHover  justify-center relative ">
+          <ShoppingCart />
+          <p className="text-xs mt-3 text-whiteText font-semibold">Cart <span className="absolute text-sm -top-1 left-6 font-semibold p-1 h-4
+           bg-[#f3a847] text-amazon_blue rounded-full flex items-center justify-center">0</span></p>
         </div>
 
       </div>
