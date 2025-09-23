@@ -1,3 +1,4 @@
+import { bdFlag, logo } from "../../assets"
 import { footerMiddleList } from "../../constants"
 
 function FooterMiddle() {
@@ -17,6 +18,19 @@ function FooterMiddle() {
                     </div>
                     ))}
                 </div>
+            </div>
+        </div>
+
+        <div className="w-full flex gap-6 items-center justify-center py-6 ">
+            <div>
+                <img src={logo} alt="logo" className="w-20 pt-3" />
+            </div>
+            <div className="flex gap-2">
+                <p className=" border border-gray-500 hover:border-amazon_yellow cursor-pointer duration-200 px-2 py-1">English</p>
+            </div>
+            <div className="border border-gray-500 py-1 px-2 hover:border-amazon_yellow flex gap-1 items-center justify-center cursor-pointer duration-200">
+                <img src={bdFlag} alt="flag" className="w-6" />
+                <p>Egypt</p>
             </div>
         </div>
     </div>
