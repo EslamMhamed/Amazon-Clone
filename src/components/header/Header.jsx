@@ -13,7 +13,7 @@ function Header() {
   const [showAll, setShowAll] = useState(false)
 
   return (
-   <div className="w-full">
+   <div className="w-full sticky top-0  z-50">
      <div className='bg-amazon_blue py-3 px-4  text-white flex items-center gap-4'>
         <div className="headerHover ">
          <img src={logo} alt="logo" className="w-24 mt-2" />
