@@ -5,7 +5,7 @@ import Footer from "../components/footer/Footer"
 
 function LayoutRoot() {
   return (
-    <div className="font-bodyFont">
+    <div className="font-bodyFont bg-gray-100 ">
         <Header />
             <main>
                 <Outlet />
