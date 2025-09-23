@@ -5,13 +5,14 @@ import Banner from "./components/home/Banner"
 import LayoutRoot from "./pages/LayoutRoot"
 import NotFoundPage from "./pages/NotFoundPage"
 import Home from "./pages/Home"
+import { productsData } from "./api/api"
 
 
 function App() {
 
   const router = createBrowserRouter([
     {path: "/", element:<LayoutRoot />, errorElement: <NotFoundPage/>, children:[
-      {index:true, element: <Home /> }
+      {index:true, element: <Home />, loader: productsData }
     ]} 
   ])
 
