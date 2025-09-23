@@ -12,4 +12,14 @@
     .footerLink{
         @apply text-sm font-titleFont tracking-wide hover:text-gray-100 cursor-pointer
     }
+
+    .footerBottomTitle{
+        @apply w-24  font-semibold text-[12px] group-hover:underline text-[#ddd] leading-3 mb-[2px]
+    }
+
+    .footerBottomText{
+        @apply w-24   text-[12px] group-hover:underline text-[#999] leading-3  tracking-tight
+    }
+
+    
 }

@@ -39,3 +39,32 @@ export   const allItems = [
     {title:"Let Us Help You" , 
       items:["Amazon and COVID-19", "Your Account", "Your Orders", "Shipping Rates & Policies", "Returns & Replacements", "Manage Your Content and Devices", "Help"] }
   ]
+
+  export const footerBottomItem = [
+    {title: "Amazon Music", des:"Stream millions of songs"},
+    {title: "Amazon Business", des:"Everything For Your Business" },
+    {title: "IMDbPro", des:"Get Info Entertainment Professionals Need"},
+    {title: "Amazon Ads", des:"Reach customers wherever they spend their time"},
+    {title: "AmazonGlobal", des:"Ship Orders Internationally"},
+    {title: "Kindle Direct Publishing", des:"Indie Digital & Print Publishing Made Easy"},
+    {title: "eero WiFi", des:"Stream 4K Video in Every Room"},
+    {title: "6pm", des:"Score deals on fashion brands"},
+    {title: "Amazon Web Services", des:"Scalable Cloud Computing Services"},
+    {title: "Prime Video Direct", des:"Video Distribution Made Easy"},
+    {title: "Blink", des:"Smart Security for Every Home"},
+    {title: "AbeBooks", des:"Books, art & collectibles"},
+    {title: "Audible", des:"Listen to Books & Original Audio Performances"},
+    {title:"Shopbop", des:"Designer Fashion Brands"},
+    {title:"Neighbors App", des:"Real-Time Crime & Safety Alerts"},
+    {title:"ACX", des:"Audiobook Publishing Made Easy"},
+    {title:"Box Office Mojo", des:"Find Movie Box Office Data"},
+    {title:"Woot!", des:"Deals and Shenanigans"},
+    {title:" Amazon Subscription Boxes", des:"Top subscription boxes  right to your door"},
+    {title:"Sell on Amazon", des:"Start a Selling Account"},
+    {title:"Goodreads", des:"Book reviews & recommendations"},
+    {title:"Zappos", des:"Shoes & Clothing"},
+    {title:"PillPack", des:"Pharmacy Simplified"},
+    {title:"Veeqo", des:"Shipping Software Inventory Management"},
+    {title:"IMDb", des:"Movies, TV & Celebrities"},
+    {title:"Ring", des:"Smart Home Security Systems"},
+  ]
