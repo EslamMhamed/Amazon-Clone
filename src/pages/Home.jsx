@@ -8,7 +8,9 @@ function Home() {
   return (
     <div>
         <Banner />
-        <Products />
+        <div className="-mt-32 pt-10">
+          <Products />
+        </div>
     </div>
   )
 }
