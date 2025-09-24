@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {darkLogo} from "../assets/index"
 
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
@@ -31,7 +32,10 @@ function Signin() {
                     <span className=" w-1/3 h-[1px] bg-zinc-400  "></span>
                     
                 </div>
-                <button type="button" className="w-full font-normal mt-4 text-sm rounded-sm bg-gradient-to-t hover:bg-gradient-to-b from-slate-200 to-slate-100 py-1.5 border border-zinc-400 active:border-yellow-800 active:shadow-amazonInput">Create your Amazon account</button>
+                <Link className="w-full" to="/registration" >
+                    <button type="button" className="w-full font-normal mt-4 text-sm rounded-sm bg-gradient-to-t hover:bg-gradient-to-b from-slate-200 to-slate-100 py-1.5 border border-zinc-400 active:border-yellow-800 active:shadow-amazonInput">Create your Amazon account</button>
+                </Link>
+                
             </form>
         </div>
         <div className="w-full bg-gradient-to-t from-white via-white to-zinc-200 h-20 flex flex-col items-center justify-center gap-4">
