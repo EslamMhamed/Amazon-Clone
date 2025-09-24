@@ -20,7 +20,7 @@ function Signin() {
                             <p className="text-sm font-medium">Password</p>
                             <input className="w-full lowercase py-1 border border-zinc-400 px-2 text-balance rounded-sm outline-none focus:border-[#e77600] focus:shadow-amazonInput duration-100 "  type="password"  />
                         </div>
-                        <button type="button" className="w-full text-sm py-1.5 font-normal rounded-sm bg-gradient-to-t from-[#f7dfa5] to-[#f0c14b] hover:bg-gradient-to-b border border-zinc-400 active:border-y-red-800 active:shadow-amazonInput ">Continue</button>
+                        <button type="button" className="w-full text-sm py-1.5 font-normal rounded-sm bg-gradient-to-t from-[#f7dfa5] to-[#f0c14b] hover:bg-gradient-to-b border border-zinc-400 active:border-yellow-800 active:shadow-amazonInput ">Continue</button>
                     </div>
                     <p className="text-xs text-black leading-4 mt-4
                     ">By continuing, you agree to Amazon's <span className="text-blue-600">Conditions of Use  </span > and <span className="text-blue-600">Privacy Notice.</span></p>
