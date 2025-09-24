@@ -2,9 +2,9 @@ import { footerBottomItem } from "../../constants"
 
 function FooterBottom() {
   return (
-    <div className="w-full bg-footerBottom py-8">
+    <div className="w-full bg-footerBottom p-8">
         <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-7 items-start place-content-center gap-3 text-gray-400 ">
+            <div className="grid grid-cols-3 md:grid-cols-5 mdl:grid-cols-6  lg:grid-cols-7 items-start place-content-center  gap-3 text-gray-400 ">
                 {footerBottomItem.map((item, index)=> (
                     <div className="group cursor-pointer" key={index}>
                         <h3 className="footerBottomTitle">{item.title}</h3>

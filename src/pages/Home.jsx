@@ -8,7 +8,7 @@ function Home() {
   return (
     <div>
         <Banner />
-        <div className="-mt-32 pt-10">
+        <div className="-mt-10 xl:-mt-32 pt-10">
           <Products />
         </div>
     </div>

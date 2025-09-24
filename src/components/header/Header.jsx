@@ -19,12 +19,12 @@ function Header() {
          <img src={logo} alt="logo" className="w-24 mt-2" />
         </div>
 
-        <div  className="headerHover gap-0.5 ">
+        <div  className="headerHover gap-0.5 hidden mdl:inline-flex ">
           <LocationOnOutlined />
           <p className="text-sm font-light text-lightText">Deliver to <span className="block text-center text-white font-semibold -mt-1">Egypt</span></p>
         </div>
 
-        <div className="flex flex-grow rounded-md h-10 relative">
+        <div className="hidden lgl:flex flex-grow rounded-md h-10 relative">
           <span onClick={()=> setShowAll(prev => !prev)} className="flex items-center justify-center bg-gray-200 hover:bg-gray-300 border-2 cursor-pointer duration-300 text-sm text-amazon_blue font-titleFont  w-14 h-full rounded-tl-md rounded-bl-md   ">
             All <span><ArrowDropDownOutlined /></span>
           </span>
@@ -45,13 +45,13 @@ function Header() {
         </div>
 
         <div className="headerHover flex-col items-start justify-center ">
-          <p className="text-xs text-lightText font-light">Hello, Sign in </p>
-          <p className="text-xs font-semibold -mt-1 text-whiteText">Accounts & Lists 
+          <p className="text-sm lgl:text-xs  text-white mdl:text-lightText font-light">Hello, Sign in </p>
+          <p className="text-xs font-semibold -mt-1 text-whiteText hidden mdl:inline-flex">Accounts & Lists 
             <span><ArrowDropDownOutlined/></span>
           </p>
         </div>
 
-        <div className="headerHover flex-col items-start  text-xs ">
+        <div className="headerHover hidden lgl:flex flex-col items-start  text-xs ">
           <p className=" text-lightText font-light">Returns</p>
           <p className=" font-semibold -mt-1 text-whiteText">& Orders</p>
         </div>
