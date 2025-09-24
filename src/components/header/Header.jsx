@@ -7,6 +7,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { useState } from "react";
 import { allItems } from "../../constants";
 import HeaderBottom from "./HeaderBottom";
+import { Link } from "react-router-dom";
 
 
 function Header() {
@@ -44,12 +45,14 @@ function Header() {
           </span>
         </div>
 
-        <div className="headerHover flex-col items-start justify-center ">
+        <Link to="/signin" >
+          <div className="headerHover flex-col items-start justify-center ">
           <p className="text-sm lgl:text-xs  text-white mdl:text-lightText font-light">Hello, Sign in </p>
           <p className="text-xs font-semibold -mt-1 text-whiteText hidden mdl:inline-flex">Accounts & Lists 
             <span><ArrowDropDownOutlined/></span>
           </p>
         </div>
+        </Link>
 
         <div className="headerHover hidden lgl:flex flex-col items-start  text-xs ">
           <p className=" text-lightText font-light">Returns</p>
