@@ -14,7 +14,7 @@ const initialState = {
             const item = state.products.find(item => item.id === action.payload.id)
 
             if(item){
-                item.quantity += action.payload.quantity
+                item.quantity++
             }else{
                 state.products.push(action.payload)
             }

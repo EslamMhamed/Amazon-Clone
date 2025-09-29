@@ -8,10 +8,13 @@ import { useState } from "react";
 import { allItems } from "../../constants";
 import HeaderBottom from "./HeaderBottom";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 
 function Header() {
   const [showAll, setShowAll] = useState(false)
+
+  const produsts= useSelector(state => state.products)
 
   return (
    <div className="w-full sticky top-0  z-50">
@@ -62,7 +65,7 @@ function Header() {
         <div className="headerHover  justify-center relative ">
           <ShoppingCart />
           <p className="text-xs mt-3 text-whiteText font-semibold">Cart <span className="absolute text-sm -top-1 left-6 font-semibold p-1 h-4
-           bg-[#f3a847] text-amazon_blue rounded-full flex items-center justify-center">0</span></p>
+           bg-[#f3a847] text-amazon_blue rounded-full flex items-center justify-center">{produsts.length}</span></p>
         </div>
 
       </div>
