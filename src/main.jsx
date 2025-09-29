@@ -3,9 +3,13 @@ import { createRoot } from 'react-dom/client'
 import "slick-carousel/slick/slick.css";
 import './index.css'
 import App from './App.jsx'
+import { Provider } from 'react-redux';
+import store from './redux/index.js';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+  <Provider store={store} >
+    <StrictMode>
+      <App />
+    </StrictMode>,
+  </Provider>
 )
