@@ -5,11 +5,16 @@ import AppsIcon from '@mui/icons-material/Apps';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import { useDispatch } from "react-redux";
+import { amazonActions } from "../../redux/amazonSlice";
 
 function Products() {
 
+  const dispatch = useDispatch()
+
 const productData = useLoaderData()
-console.log(productData)
+
+
 
   return (
     <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 xl:gap-10 px-4" >
@@ -51,7 +56,15 @@ console.log(productData)
                 <StarIcon />
               </div>
             </div>
-            <button className="w-full  py-1.5  rounded-md mt-3 font-titleFont font-medium  text-base bg-gradient-to-tr from-yellow-400 to-yellow-200 border hover:from-yellow-300 hover:to-yellow-100 hover:border-yellow-700 active:bg-gradient-to-bl active:from-yellow-400 active:to-yellow-500 duration-200  ">Add to Cart</button>
+            <button onClick={()=> dispatch(amazonActions.addToCart({
+              id: product.id,
+              title: product.title,
+              description: product.description,
+              category: product.category,
+              price: product.price,
+              image: product.image,
+              quantity: 1
+            }))} className="w-full  py-1.5  rounded-md mt-3 font-titleFont font-medium  text-base bg-gradient-to-tr from-yellow-400 to-yellow-200 border hover:from-yellow-300 hover:to-yellow-100 hover:border-yellow-700 active:bg-gradient-to-bl active:from-yellow-400 active:to-yellow-500 duration-200  ">Add to Cart</button>
             </div>
             </div>
           </div>
