@@ -19,9 +19,11 @@ function Header() {
   return (
    <div className="w-full sticky top-0  z-50">
      <div className='bg-amazon_blue py-3 px-4  text-white flex items-center gap-4'>
-        <div className="headerHover ">
+        <Link to="/">
+          <div className="headerHover ">
          <img src={logo} alt="logo" className="w-24 mt-2" />
         </div>
+        </Link>
 
         <div  className="headerHover gap-0.5 hidden mdl:inline-flex ">
           <LocationOnOutlined />
@@ -62,11 +64,13 @@ function Header() {
           <p className=" font-semibold -mt-1 text-whiteText">& Orders</p>
         </div>
 
-        <div className="headerHover  justify-center relative ">
+        <Link to= "/cart">
+          <div className="headerHover  justify-center relative ">
           <ShoppingCart />
           <p className="text-xs mt-3 text-whiteText font-semibold">Cart <span className="absolute text-sm -top-1 left-6 font-semibold p-1 h-4
            bg-[#f3a847] text-amazon_blue rounded-full flex items-center justify-center">{produsts.length}</span></p>
         </div>
+        </Link>
 
       </div>
 
