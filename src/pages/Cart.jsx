@@ -3,6 +3,10 @@ import { useDispatch, useSelector } from "react-redux"
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { useEffect, useState } from "react";
 import { amazonActions } from "../redux/amazonSlice";
+import {emptyCart} from "../assets/index"
+import { Link } from "react-router-dom";
+import {motion} from "framer-motion"
+
 
 function Cart() {
 
@@ -22,7 +26,10 @@ function Cart() {
 
   return (
     <div className="w-full bg-gray-100 p-4">
-        <div className="  grid grid-cols-5 gap-8 h-auto ">
+        {
+            products.length > 0 ? 
+        (
+            <div className="  grid grid-cols-5 gap-8 h-auto ">
             <div className="col-span-4 px-4 bg-white ">
                 <div className="font-titleFont flex items-center justify-between border-b-[1px] border-b-gray-400 py-3 ">
                     <h2 className="text-3xl font-medium">Shopping Cart</h2>
@@ -70,6 +77,20 @@ function Cart() {
                 <button className="w-full font-titleFont font-medium text-base bg-gradient-to-tr from-yellow-400 to-yellow-200 border border-yellow-500 hover:from-yellow-300 active:bg-gradient-to-bl active:from-yellow-400 active:to-yellow-500 duration-200 py-1.5 rounded-md mt-3">Proceed to Pay</button>
             </div>
         </div>
+        ) : 
+        <motion.div initial={{y: 70, opacity:0}} animate={{y:0, opacity:1}}  transition={{duration: .5, delay:.5}} className="flex justify-center items-center gap-4 py-10">
+            <div>
+            <img className="w-80 rounded-lg p-4 mx-auto" src={emptyCart} alt="emptyCart" />
+            </div>
+            <div className="bg-white p-4 flex flex-col items-center w-96 rounded-md  shadow-lg">
+                <h1 className="font-titleFont text-xl font-bold">Your Cart feels lonely.</h1>
+                <p className="text-sm text-center">Your Shopping cart lives to serve. Give it purpose - fill it with books, electronics, videos, etc. and make it happy. </p>
+                <Link to="/">
+                    <button className="mt-6 bg-yellow-400 rounded-md cursor-pointer hover:bg-yellow-500 active:bg-yellow-700 px-8 py-2 font-titleFont font-semibold text-lg ">Continue Shopping</button>
+                </Link>
+            </div>
+        </motion.div>
+        }
     </div>
   )
 }
