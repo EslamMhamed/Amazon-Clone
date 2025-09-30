@@ -17,11 +17,11 @@ function Cart() {
 
                 <div>
                     {products.map(item => (
-                        <div key={item.id} className="w-full border-b-[1px] border-b-gray-300 p-4 flex items-center gap-6">
+                        <div key={item.id} className="w-full border-b-[1px] border-b-gray-300 p-4 flex items-center  gap-6  ">
                             <div className="w-1/5 ">
                                 <img className="w-full h-44 object-contain" src={item.image} alt="product img" />
                             </div>
-                            <div>
+                            <div className="w-3/5">
                                 <h2 className="font-semibold text-lg">{item.title}</h2>
                                 <p className="pr-10 text-sm">{item.description}</p>
                                 <p className="text-base">Unit Price: <span className="font-semibold">${item.price}</span></p>
@@ -31,6 +31,10 @@ function Cart() {
                                     <p>{item.quantity}</p>
                                     <p className="cursor-pointer bg-gray-200 px-1 rounded-md hover:bg-gray-400 duration-300">+</p>
                                 </div>
+                                <button className="bg-red-500 w-36 rounded-lg py-1 text-white mt-2 hover:bg-red-700 active:bg-red-900 duration-300">Delete Item</button>
+                            </div>
+                            <div className="w-1/5   text-end  ">
+                                <p className="text-lg font-titleFont font-semibold">{item.price * item.quantity}</p>
                             </div>
                         </div>
                     ))}
