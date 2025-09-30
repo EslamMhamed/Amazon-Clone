@@ -1,17 +1,21 @@
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { useEffect, useState } from "react";
+import { amazonActions } from "../redux/amazonSlice";
 
 function Cart() {
 
     const products = useSelector(state => state.products)
     const [totalPrice, setTotalPrice] = useState(0)
 
+    const dispatch = useDispatch()
+
     useEffect(()=>{
         let total = 0
         products.map(item => {
             total += item.price * item.quantity
+            
             return setTotalPrice(total.toFixed(2))}
         )
     },[products])
@@ -38,11 +42,11 @@ function Cart() {
                                 <p className="text-base">Unit Price: <span className="font-semibold">${item.price}</span></p>
                                 <div className="bg-[#f0f2f2] flex items-center justify-center  gap-1 w-24 py-1 text-center drop-shadow-lg rounded-md ">
                                     <p>Qty: </p>
-                                    <p className="cursor-pointer bg-gray-200 px-1 rounded-md hover:bg-gray-400 duration-300">-</p>
+                                    <p onClick={()=> dispatch(amazonActions.decrementQuantity(item.id))} className="cursor-pointer bg-gray-200 px-1 rounded-md hover:bg-gray-400 duration-300">-</p>
                                     <p>{item.quantity}</p>
-                                    <p className="cursor-pointer bg-gray-200 px-1 rounded-md hover:bg-gray-400 duration-300">+</p>
+                                    <p onClick={()=> dispatch(amazonActions.incrementQuantity(item.id))} className="cursor-pointer bg-gray-200 px-1 rounded-md hover:bg-gray-400 duration-300">+</p>
                                 </div>
-                                <button className="bg-red-500 w-36 rounded-lg py-1 text-white mt-2 hover:bg-red-700 active:bg-red-900 duration-300">Delete Item</button>
+                                <button onClick={()=> dispatch(amazonActions.deleteItem(item.id))} className="bg-red-500 w-36 rounded-lg py-1 text-white mt-2 hover:bg-red-700 active:bg-red-900 duration-300">Delete Item</button>
                             </div>
                             <div className="w-1/5   text-end  ">
                                 <p className="text-lg font-titleFont font-semibold">${item.price * item.quantity}</p>
@@ -51,7 +55,7 @@ function Cart() {
                     ))}
                 </div>
                 <div className="py-2">
-                    <button className="px-10  py-2  bg-red-500 hover:bg-red-600 active:bg-red-500 text-white rounded-lg font-titleFont font-semibold text-lg tracking-wide">Clear Cart</button>
+                    <button onClick={()=> dispatch(amazonActions.resetCart())} className="px-10  py-2  bg-red-500 hover:bg-red-600 active:bg-red-500 text-white rounded-lg font-titleFont font-semibold text-lg tracking-wide">Clear Cart</button>
                 </div>
             </div>
             <div className="col-span-1 h-52 px-4 bg-white flex flex-col items-center p-4 justify-center ">
